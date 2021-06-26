@@ -28,7 +28,7 @@ h6 {
 .wrapper {
 	margin: 0 auto;
 }
-article img {
+article .img {
 	border-radius: 10px;
 	width: 100%;
 	max-width: 250px;
@@ -72,6 +72,14 @@ div.row {
 	border-bottom-right-radius: 10px;
 	padding: 1em;
 }
+
+.gallery-row {
+	background-color: #fff6e0;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: 1em;
+}
+
 .floatleft {
 	float: left;
 	margin: 0 1em 1em 0;
@@ -153,12 +161,67 @@ footer a {
 	margin-bottom: 2em;
 	margin-right: 1em;
 }
+.full {
+	flex: 0 0 92%;
+	margin: 0 4%;
+}
+
 .row.col-1-4 {
 	margin-top: 3em;
 }
 /* global alignment options */
 .reverse {
 	flex-direction: row-reverse;
+}
+
+.gallery {
+	list-style-type: none;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.gallery-item {
+	flex: auto;
+}
+
+.gallery-img {
+	width: 100%;
+	border-radius: 10%;
+}
+
+.aside {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.aside div {
+	flex: auto;
+}
+
+.menu figure,
+.mothers-day figure {
+	margin: 0;
+}
+
+.cite {
+	display: block;
+	margin-top: 8%;
+	font-style: italic;
+}
+
+.btn {
+	background-color: #c80060;
+	border: none;
+	border-radius: 100px;
+	padding: 10px;
+	color: #ffff;
+	font-weight: bold;
+	margin: 10% 0;
+}
+@media (max-width: 1px) {
+	.hero {
+		display: none;
+	}
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -198,6 +261,24 @@ footer a {
 	.reverse [class*="col-"] {
 		margin-left: 0%;
 		margin-right: 4%;
+	}
+
+	.aside div {
+		flex: 0 0 46%;
+		margin-left: 2%;
+	}
+
+	.menu,
+	.mothers-day {
+		order: -1;
+	}
+	.full {
+		flex: 0 0 92%;
+	}
+	.hero {
+		background: url(../gallery/pie-slice-buffet.jpg);
+		background-position: 90% 90%;
+		height: 150px;
 	}
 }
 /* Large devices (large desktops, 1200px and up) */
@@ -256,5 +337,29 @@ footer a {
 	}
 	.order-fourth {
 		order: 4;
+	}
+
+	.gallery-item {
+		flex: 0 0 33%;
+	}
+
+	.aside div {
+		flex: 0 0 20%;
+		margin-left: 4%;
+	}
+
+	.menu,
+	.mothers-day {
+		order: 0;
+	}
+
+	.full {
+		flex: 0 0 92%;
+	}
+
+	.hero {
+		background: url(../gallery/pie-slice-buffet.jpg);
+		background-position: 90% 90%;
+		height: 150px;
 	}
 }
